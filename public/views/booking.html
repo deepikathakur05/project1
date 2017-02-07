@@ -1,0 +1,57 @@
+<div class="jumbotron text-center">
+    <h1>Book Movies</h1>
+
+    <p>{{ tagline }}</p>
+
+   <div>
+        <center>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Movies</th>
+                        <th>Select City</th>
+                        <th>Theatre Name</th>
+                       
+                         
+                       
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+<td><select ng-model="booking.movi"><option ng-repeat="movi in moviList" ng-value ="movi.moviTitle">
+  {{movi.moviTitle}}
+
+<td><select ng-model="booking.city"><option ng-repeat="city in cityList" ng-value ="city.cityName">
+  {{city.cityName}}
+
+ <td><select ng-model="booking.theatre"><option ng-repeat="theatre in theatreList" ng-value ="theatre.theatreName">
+  {{theatre.theatreName}}
+
+
+
+  <td><button ng-click="addBooking(booking)" class="btn btn-primary">Add </button></td>
+
+<td><button ng-click="updateBooking(booking)" class="btn btn-primary">Update</button></td>
+
+     </tr>
+
+   
+    <tr ng-repeat=" booking in bookingList">
+    <td>{{movi.moviTitle}}</td>
+    <td>{{city.cityName}}</td>
+    <td>{{theatre.theatreName}}</td>
+    
+
+    
+    
+                       
+
+<td><button ng-click="removeBooking(booking)" class="btn btn-danger">Remove</button></td>
+<td><button ng-click="editBooking(booking)" class="btn btn-primary">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+    </div>
